@@ -16,10 +16,11 @@ class MyApp extends StatelessWidget {
           children: [
             RaisedButton(
               child: Text(questions[0]),
+              onPressed: () => print(questions[0]),
             ),
             RaisedButton(
               child: Text(questions[1]),
-            )
+            ),
           ],
         ),
       ),

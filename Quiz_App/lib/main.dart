@@ -1,10 +1,11 @@
+import 'package:flutter/material.dart';
 
 void main() {
-  
+  runApp(MyApp());
 }
 
-class MyApp Extends StatelessWidget {
+class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
-    return MaterialApp(home: Text("HOME"))
+    return MaterialApp(home: Text("HOME"));
   }
 }

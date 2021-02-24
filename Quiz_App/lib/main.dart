@@ -6,6 +6,9 @@ void main() {
 
 class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
-    return MaterialApp(home: Text("HOME"));
+    return MaterialApp(
+        home: Scaffold(
+      appBar: AppBar(),
+    ));
   }
 }

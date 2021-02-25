@@ -4,16 +4,25 @@ void main() {
   runApp(MyApp());
 }
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
+  @override
+  _MyAppState createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
   var questions = [
     "What's your name?",
     "Where are you from?",
     "How old are you?"
   ];
+
   var questionIndex = 0;
 
   answerQuestion() {
-    questionIndex++;
+    setState(() {
+      questionIndex++;
+    });
+
     print(questionIndex);
   }
 

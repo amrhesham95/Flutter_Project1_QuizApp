@@ -5,7 +5,18 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  var questions = ["question1", "question2"];
+  var questions = [
+    "What's your name?",
+    "Where are you from?",
+    "How old are you?"
+  ];
+  var questionIndex = 0;
+
+  answerQuestion() {
+    questionIndex++;
+    print(questionIndex);
+  }
+
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
@@ -14,12 +25,18 @@ class MyApp extends StatelessWidget {
         ),
         body: Column(
           children: [
+            Text(questions[questionIndex]),
             RaisedButton(
-              child: Text(questions[0]),
-              onPressed: () => print(questions[0]),
+              child: Text("Answer1"),
+              onPressed: answerQuestion,
             ),
             RaisedButton(
-              child: Text(questions[1]),
+              child: Text("Answer2"),
+              onPressed: answerQuestion,
+            ),
+            RaisedButton(
+              child: Text("Answer3"),
+              onPressed: answerQuestion,
             ),
           ],
         ),

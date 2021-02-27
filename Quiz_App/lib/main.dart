@@ -21,7 +21,7 @@ class _MyAppState extends State<MyApp> {
 
   var _questionIndex = 0;
 
-  answerQuestion() {
+  _answerQuestion() {
     setState(() {
       _questionIndex++;
     });
@@ -40,9 +40,9 @@ class _MyAppState extends State<MyApp> {
             Question(
               questionText: _questions[_questionIndex],
             ),
-            Answer(),
-            Answer(),
-            Answer(),
+            Answer(_answerQuestion),
+            Answer(_answerQuestion),
+            Answer(_answerQuestion),
           ],
         ),
       ),

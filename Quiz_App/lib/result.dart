@@ -14,9 +14,10 @@ class Result extends StatelessWidget {
             totalScore.toString(),
             style: TextStyle(fontSize: 36, fontWeight: FontWeight.bold),
           ),
-          RaisedButton(
+          FlatButton(
             onPressed: resetHandler,
             child: Text("Reset"),
+            textColor: Colors.blue,
           ),
         ],
       ),

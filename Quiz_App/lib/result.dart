@@ -1,10 +1,16 @@
 import 'package:flutter/material.dart';
 
 class Result extends StatelessWidget {
+  final int totalScore;
+
+  Result({@required this.totalScore});
   @override
   Widget build(BuildContext context) {
     return Center(
-      child: Text("You Did it !!!"),
+      child: Text(
+        totalScore.toString(),
+        style: TextStyle(fontSize: 36, fontWeight: FontWeight.bold),
+      ),
     );
   }
 }

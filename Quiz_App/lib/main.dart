@@ -16,21 +16,35 @@ class _MyAppState extends State<MyApp> {
   var _questions = [
     {
       "questionText": "What are you going to do tonight?",
-      "answers": ["Play ludo with Hagar", "Study", "Go to gym"],
+      "answers": [
+        {"text": "Eat", "score": 5},
+        {"text": "Study", "score": 10},
+        {"text": "Go to gym", "score": 15}
+      ],
     },
     {
       "questionText": "What's your favorite food?",
-      "answers": ["Pasta", "Pizza", "Burger"],
+      "answers": [
+        {"text": "Pasta", "score": 5},
+        {"text": "Pizza", "score": 10},
+        {"text": "Burger", "score": 15}
+      ]
     },
     {
       "questionText": "Where are you from?",
-      "answers": ["Cairo", "Alex", "Luxor"],
+      "answers": [
+        {"text": "Cairo", "score": 5},
+        {"text": "Alex", "score": 10},
+        {"text": "Luxor", "score": 15}
+      ]
     },
   ];
 
   var _questionIndex = 0;
+  var _totalScore = 0;
 
-  _answerQuestion() {
+  _answerQuestion(int score) {
+    // _totalScore += score;
     setState(() {
       _questionIndex++;
     });
@@ -50,7 +64,9 @@ class _MyAppState extends State<MyApp> {
                 questionIndex: _questionIndex,
                 answerQuestion: _answerQuestion,
               )
-            : Result(),
+            : Result(
+                totalScore: _totalScore,
+              ),
       ),
     );
   }
